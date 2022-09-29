@@ -62,6 +62,7 @@ static void MX_GPIO_Init(void);
   * @retval int
   */
 void clearAllClock() {
+	/* SET la trang thai tat */
 	HAL_GPIO_WritePin(Led0_GPIO_Port, Led0_Pin, SET);
 	HAL_GPIO_WritePin(Led1_GPIO_Port, Led1_Pin, SET);
 	HAL_GPIO_WritePin(Led2_GPIO_Port, Led2_Pin, SET);
@@ -76,6 +77,7 @@ void clearAllClock() {
 	HAL_GPIO_WritePin(Led11_GPIO_Port, Led11_Pin, SET);
 }
 void setNumberOnClock(int num) {
+	/* RESET la trang thai bat */
 	if (num==0) HAL_GPIO_WritePin(Led0_GPIO_Port, Led0_Pin, RESET);
 	if (num==1) HAL_GPIO_WritePin(Led1_GPIO_Port, Led1_Pin, RESET);
 	if (num==2) HAL_GPIO_WritePin(Led2_GPIO_Port, Led2_Pin, RESET);
